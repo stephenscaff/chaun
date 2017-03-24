@@ -1,0 +1,35 @@
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.content{
+
+  p{
+    margin-bottom: 1.5em;
+  }
+
+  h2, h3, h4, h5{
+    margin: 1.25em 0 0.75em;
+  }
+
+  h3, h4{
+    font-size: $font-h4;
+  }
+
+  figcaption{
+    margin: 0.15em auto 1.5em;
+    font-size: $font-xxsmall;
+    text-align: center;
+    color: $color-midgrey;
+  }
+
+  figure{
+    margin: 1.75em auto;
+  }
+
+  figure + figure{
+    margin: 0.25em auto;
+  }
+}

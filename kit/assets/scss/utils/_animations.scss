@@ -1,0 +1,184 @@
+
+//----------------------------------------------
+// Fade In
+//----------------------------------------------
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+//----------------------------------------------
+// Fade Out
+//----------------------------------------------
+@keyframes fade-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+//----------------------------------------------
+//  Fade Up
+//  Entrance animation: Fades up and in
+//----------------------------------------------
+@keyframes fade-up {
+  0% { 
+    transform: translate3d(0,30%,0); 
+    opacity: 0;
+  }
+  100% { 
+    transform: translate3d(0,0,0); 
+    opacity: 1
+  }
+}
+
+//----------------------------------------------
+//  Slide Up
+//----------------------------------------------
+@keyframes slide-up{
+  from {
+    transform: translate3d(0,140%,0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+  }
+}
+
+//----------------------------------------------
+//  Rotate 3d
+//----------------------------------------------
+@keyframes rotate-3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+//----------------------------------------------
+//  Rotate
+//----------------------------------------------
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//----------------------------------------------
+//  Scale In
+//----------------------------------------------
+@keyframes scale-in {
+  0%   { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+//----------------------------------------------
+//  Scale In and Fade
+//----------------------------------------------
+@keyframes fade-scale-in {
+  0%   { opacity: 0; transform: scale(1);}
+  100% { opacity: 1; transform: scale(1.03);}
+}
+
+
+//----------------------------------------------
+//  Reveal Right
+//  For psedu overlays that transform right to 
+//  reval it's content.
+//----------------------------------------------
+@keyframes reveal-right{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(120%);
+  }
+}
+//----------------------------------------------
+//  Animate Width
+//----------------------------------------------
+@keyframes ani-width {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+//----------------------------------------------
+//  Animate Height
+//----------------------------------------------
+@keyframes ani-height {
+  from{
+    height: 0;
+  }
+  to{
+    height: 100%;
+  }
+}
+
+//----------------------------------------------
+//  Arrow bounce
+//----------------------------------------------
+@keyframes arrow-bounce-in{
+  0%{
+    opacity: 0; 
+    transform: translateY(0);
+  }
+  40%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  55%{
+    transform: translateY(-20%) ;
+  }
+  60%{
+    transform: translateY(20%);
+  }
+  65%{
+    transform: translateY(0%);
+  }
+  70%{
+    transform: translateY(20%);
+  }
+  75%{
+    transform: translateY(1%);
+  }
+  80%{
+    transform: translateY(20%);
+  }
+  85%{
+    transform: translateY(0%);
+  }
+}
+
+//----------------------------------------------
+//  Animate Helpers
+//----------------------------------------------
+.fade-in{
+  animation: fade-in 0.7s ease;
+}
+
+.fade-out{
+  animation: fade-out 0.7s ease;
+}
+
+
+%rotate{
+  display: inline-block;
+  margin: 0 auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: rotate 2s linear infinite;
+}
+
+%rotate-3d{
+  display: inline-block;
+  margin: 0 auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: rotate-3d 2s linear infinite;
+}
+

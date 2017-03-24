@@ -1,0 +1,89 @@
+//--------------------------------------------
+// Masts
+// Masthead elements, with some simple mods
+//--------------------------------------------
+.mast{
+  position: relative;
+  padding: $pad-lg 0 $pad;
+  @media (min-width: $mq-med){
+    padding: $pad-xl 0 8em;
+  }
+
+  // Help/Hint to scroll
+  &__help{
+    animation: arrow-bounce-in 4s ease;
+    @media (min-width: $mq-med){
+      display: none;
+    }
+  }
+
+  &__title{
+    @media (max-width: $mq-med){
+      font-size: $font-h2;
+    }
+  }
+}
+
+//--------------------------------------------
+// Masts--Left Modifier
+//--------------------------------------------
+.mast--left{
+  padding: $pad-xl 0 $pad;
+  
+  .mast__title{
+    max-width: 15em;
+  }
+}
+
+//----------------------------------------------
+//  Mast Center
+//----------------------------------------------
+.mast--center{
+  text-align: center;
+}
+
+//--------------------------------------------
+// Is Fixed State
+//--------------------------------------------
+.mast.is-fixed {
+
+  .mast__header{
+    text-align: center;
+    @media (min-width: $mq-med){
+      z-index: 9;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+//--------------------------------------------
+// Mast-Img
+// Just a stupid simple mast that houses an image
+//--------------------------------------------
+.mast-img{
+  max-height: 75vh;
+  overflow: hidden;
+  background-color: $color-beta;
+
+  &:after{
+    content: '';
+    display: block;
+    padding-top: 60%;
+
+    @media (min-width: $mq-med){
+      padding-top: 40%;
+    }
+  }
+
+  &__bg{
+    @include  bg-img-abs($bg_size: cover, $bg_position: 50%);
+    animation: fade-in 1s 1s ease both;
+  }
+
+  img{
+    pointer-events: none;
+  }
+}

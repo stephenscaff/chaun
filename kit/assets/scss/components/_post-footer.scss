@@ -1,0 +1,115 @@
+//----------------------------------------------
+//  Post Footer
+//
+//  Single post footers. Contains author bylines, 
+//  avatars, social shares, etc.
+//
+//  @group post
+//-----------------------------------------------
+.post-footer{
+  padding: $pad-sm 0 $pad;
+
+  &__shares{
+    border-top: 1px solid #bbb;
+    padding: 1em 0 2em;
+
+    h5{
+      display: inline;
+      vertical-align: middle;
+      margin-right: 1em;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: #bbb;
+    }
+
+    a{
+      padding-right: 0.5em;
+    }
+  }
+  &__byline{
+    display: flex;
+  }
+  &__figure{
+    flex-basis: 5.75em;
+    max-width: 5.75em;
+    padding-right: 1em;
+    @media (min-width: $mq-med){
+      flex-basis: 20%;
+      max-width: 20%;
+    }
+
+  }
+
+  &__avatar{
+    height: 5em;
+    width: 5em;
+    min-width: 5em;
+    border-radius: 100%;
+    @media (min-width: $mq-med){
+      height: 6em;
+      width: 6em;
+      min-width: 6em;
+    }
+  }
+  &__author{
+    margin: 0 0 0.5em;
+    text-transform: capitalize;
+  }
+  &__bio p{
+    flex-basis: 70%;
+    max-width: 40em;
+    margin: 0 0 0.5em;
+    font-size: $font-xsmall;
+    color: $color-grey;
+  }
+  &__link{
+    margin: 1em 0 0.5em;
+    font-size: $font-xxxsmall;
+  }
+}
+
+//-----------------------------------------------
+// POST - Shares
+//-----------------------------------------------
+.post-shares{
+  padding: 2em 0 0;
+  border-top: 1px solid $color-grey;
+  
+  &__title{
+    margin-right: 1em;
+  }
+  &__title, &__link{
+    @extend %font-links;
+  }
+  
+  &__link{
+    padding-right: 1em;
+  }
+}
+//-----------------------------------------------
+// POST - Categories
+//-----------------------------------------------
+.post-cats{
+  padding: 2em 0;
+  
+  &__title{
+    margin-right: 1em;
+  }
+
+  &__title, &__item{
+    @extend %font-links;
+  }
+  &__item{
+    @include link-styles($color-alpha, $color-darkgrey);
+  }
+
+  &__item + &__item:before {
+    content: ':';
+    position: relative;
+    right: 0.5em;
+  }
+  &__item + &__item{
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+  }
+}

@@ -1,0 +1,93 @@
+//----------------------------------------------
+//  Work CTAs Group
+//-----------------------------------------------
+.work-ctas{
+  padding: 0 0 $pad-sm;
+}
+
+//----------------------------------------------
+//  Work CTAs
+//  @see scss/utils/_scrolling.js for scrolling
+//-----------------------------------------------
+.work-cta{
+
+  // Link
+  &__link{
+    display: block;
+    @include flex-row($vcenter:true);
+    padding: 0 0 $mb;
+
+    @media (min-width: $mq-med){
+      padding: $pad-sm 0;
+    }
+
+    // Change direction of cols
+    .work-cta:nth-of-type(even) &{
+      @media (min-width: $mq-med){
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // Header (layout column)
+  &__header{
+    @include flex-col(65%);
+    @media (min-width: $mq-med){
+      padding: 2em 3em;
+    }
+  }
+
+  // Add offsets
+  &__meta, &__title, &__btn{
+    @media (min-width: $mq-med){
+      padding-left: $offset;
+    }
+  }
+
+  // Pretitle
+  &__meta{
+    @extend %font-meta;
+    display: block;
+  }
+
+  // Title
+  &__title{
+    font-size: $font-h3;
+
+    @media (min-width: $mq-med){
+      font-size: $font-h2;
+    }
+  }
+
+  // Image
+  &__img{
+    //prevent image getting clipped due to reveal
+    padding: 1em 0;
+    transform: scale(1);
+    transition: transform 2s $ease-cb-2;
+    @media (min-width: $mq-med){
+    //padding: $pad;
+    }
+
+    // Hover
+    .work-cta__link:hover &{
+      transform: scale(1.05);
+      transition: transform 2s $ease-cb-2;
+    }
+  }
+
+  // Button
+  &__btn{
+    color: $color-beta;
+
+    .work-cta__link:hover &{
+      color: $color-alpha;
+    }
+  }
+
+  // Hr Sep
+  &__sep{
+    border-top: 1px solid $color-beta;
+    border-bottom: 0;
+  }
+}

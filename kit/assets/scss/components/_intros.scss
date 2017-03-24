@@ -1,0 +1,92 @@
+//----------------------------------------------
+//  Intros
+//  Styles for intro sections
+//
+//  @group intros
+//-----------------------------------------------
+.intro{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: $pad-med 0;
+  background-color: $color-lightgrey;
+
+  &__header, &__content{
+    margin: 0 auto;
+  }
+
+  &__header{
+    text-align: center;
+  }
+
+  &__subtitle{
+    font-family: $font-subheader;
+    font-weight: 700;
+    margin-bottom: $mb;
+  }
+
+  &__title{
+    max-width: 30em;
+    margin: 0 auto;
+    font-size: $font-h2;
+
+    .single-work &{
+      @media (min-width: $mq-med){
+        font-size: $font-h1;
+      }
+    }
+  }
+
+  &__cols{
+    @include flex-row($justify:space-between);
+    max-width: 42em;
+  }
+
+  &__copy{
+    @include flex-col(70%);
+  }
+
+  &__cats{
+    @media (max-width: $mq-med){
+      margin-top: $mb;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__cats a, &__cats span{
+    display: block;
+    margin-bottom: $mb-sm;
+    @extend %font-links;
+
+    @media (max-width: $mq-med){
+      flex-basis: 50%;
+      width: 50%; 
+    }
+  }
+
+  &__cats span{
+    color: $color-beta;
+  }
+
+  &__text, p{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 54em;
+  }
+}  
+
+//----------------------------------------------
+//  Intro--Post
+//  Intro modifier for blog posts
+//
+//  @group intros
+//-----------------------------------------------
+.intro--post{
+  padding: $pad 0 $pad-sm;
+
+  // Remove top padding for post's first content module
+  & + .content{
+    padding-top: 0;
+  }
+}

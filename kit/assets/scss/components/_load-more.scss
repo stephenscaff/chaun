@@ -1,0 +1,33 @@
+//----------------------------------------------   
+// Load More
+//---------------------------------------------- 
+.load-more{
+  padding: $pad-sm 0 $pad-lg;
+  text-align: center;
+  
+  .preloader.preloader--load-more{
+    top: -0.5em;
+    border: 1px solid rgba(255,255,255,0.0);
+    border-top-color: $color-alpha; 
+  }
+
+  &__preloader{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &.is-hidden{
+    animation: fade-out 2s ease forwards;
+  }
+
+  &.is-animating{
+    .load-more__preloader{
+      opacity: 1;
+    }
+  }
+}
+.load-more__link:hover{
+  .load-more__preloader{
+    opacity: 1;
+  }
+}
+

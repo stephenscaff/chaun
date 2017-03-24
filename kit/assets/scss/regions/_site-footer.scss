@@ -1,0 +1,27 @@
+
+//----------------------------------------------
+//  Site Footer
+//----------------------------------------------
+.site-footer {
+  display: none;
+  position: relative;
+  text-align: center;
+  background-color: $color-lightgrey;
+
+  .home &{
+    display: block;
+  }
+
+  &__content{
+    padding: $pad 0;
+    //border-top: 1px solid $color-beta;
+  }
+
+  small{
+    @extend %font-pretitle;
+  }
+
+  .single-work &{
+    display: none;
+  }
+}

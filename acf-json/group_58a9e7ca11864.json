@@ -1,0 +1,43 @@
+{
+    "key": "group_58a9e7ca11864",
+    "title": "Feed Title",
+    "fields": [
+        {
+            "key": "field_58a9e7e590be1",
+            "label": "Feed Title",
+            "name": "feed_title",
+            "type": "text",
+            "instructions": "Add a title that can override page titles in feeds.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "work"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1487530119
+}

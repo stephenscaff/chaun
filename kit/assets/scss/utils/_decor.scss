@@ -1,0 +1,53 @@
+//----------------------------------------------
+//  Seperators
+//----------------------------------------------
+%sep,
+.sep{
+  position: relative;
+  border: 0;
+  height: 1px;
+  width: 3em;
+  margin: 1em 0;
+  background-color: $color-dark;
+}
+%sep-center,
+.sep-center{
+  @extend %sep;
+  margin: 1em auto;
+}
+
+.sep-full{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  margin: 1em auto;
+  background-color: $color-beta;
+}
+
+.sep-dotted{
+  position: relative;
+  display: block;
+  width: 16em;
+  height: 2em;
+  margin:1em auto;
+  border: 0;
+  text-align: center;
+  background-image: url(../images/decor/sep-dotted.png);
+  background-size: 100%;
+  background-repeat: no-repeat; 
+
+}
+
+
+//----------------------------------------------
+//  Dark
+//----------------------------------------------
+.sep--dark{
+ background-color: $color-dark;
+}
+.sep--grey{
+  background-color: $color-grey;
+}
+.sep--white{
+  background-color: $color-light;
+}

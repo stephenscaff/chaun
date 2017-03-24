@@ -1,0 +1,53 @@
+//----------------------------------------------
+// Work CTAs
+//-----------------------------------------------
+.quote{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: $pad 0;
+  text-align: center;
+
+  &__content{
+    padding: $pad-sm 0;
+  }
+
+  &__quote{
+    max-width: 45em;
+  }
+
+  &__title{
+    padding: 0 5%;
+    @media (max-width: $mq-med){
+      font-size: $font-h4;
+    }
+  }
+  &__cite{
+    font-size: 1em;
+  }
+}
+
+.quote-post{
+  padding: $pad-sm 0;
+
+  p{
+    margin: 0 auto;
+    font-size: $font-h5;
+    font-family: $font-header;
+    line-height: 1.5;
+
+    @media (min-width: $mq-med){
+      font-size: $font-h4;
+      line-height: 1.75;
+    }
+  }
+
+
+  cite{
+    margin-top: $mb;
+    color: $color-grey;
+    font-size: $font-xxsmall;
+
+    @extend %font-subtitle;
+  }
+}

@@ -1,0 +1,72 @@
+//----------------------------------------------
+// Featured Post
+//-----------------------------------------------
+.ftd-post{
+
+  .grid-lg{
+    @media (max-width: $mq-med){
+      width: 100%;
+    }
+  }
+  // Link
+  &__link{
+    display: block;
+    @include flex-row($vcenter:true);
+    flex-direction: row-reverse;
+    padding: 0 0 $mb;
+
+    @media (min-width: $mq-med){
+      padding: $pad 0;
+    }
+  }
+
+  // Header (layout column)
+  &__header{
+    @include flex-col(40%);
+    text-align: center;
+    @media (min-width: $mq-med){
+      padding: 1em 2em;
+    }
+  }
+
+  // Pretitle
+  &__meta{
+    display: block;
+    margin-top: $mb;
+    @extend %font-meta;
+
+    @media (min-width: $mq-med){
+      margin-top: 0;
+    }
+  }
+ 
+  // Title
+  &__title{
+    font-size: $font-h3;
+    max-width: 10em;
+    margin: 0 auto;
+
+
+    @media (min-width: $mq-med){
+      font-size: $font-h2;
+    }
+  }
+  &__figure{
+    @include flex-col(60%);
+  }
+  // Image
+  &__img{
+
+    // Hover
+    .ftd-post__link:hover &{}
+  }
+
+  // Button
+  &__btn{
+    color: $color-beta;
+
+    .ftd-post__link:hover &{
+      color: $color-alpha;
+    }
+  }
+}

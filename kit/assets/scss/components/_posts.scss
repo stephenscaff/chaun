@@ -1,0 +1,36 @@
+//----------------------------------------------
+//  Posts Group
+//  @group posts
+//----------------------------------------------
+
+.posts{
+  &__grid{
+    @include flex-grid(1,2, $pad: 1em);
+  }
+}
+
+//----------------------------------------------
+//  Post
+//  Basic post styles for journal entries
+//  @group post
+//----------------------------------------------
+
+.post{
+  &__link{}
+
+  &__meta{
+    display: block;
+    @extend %font-meta;
+  }
+
+    // @see scss/utils/_preloaders.scss
+  &__figure{
+    @include aspect_ratio(1500, 900 );
+    overflow: hidden;
+    margin-bottom: $mb / 2;
+  }
+
+  &__img{
+    display: block;
+  }
+}

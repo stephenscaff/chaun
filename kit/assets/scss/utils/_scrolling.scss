@@ -1,0 +1,100 @@
+//----------------------------------------------
+//  Has Reveal
+//  Scroll interaction that reveals an image
+//  by sliding an overlaid image off canvas.
+//  
+//  @see js/vendor/_wow.js
+//----------------------------------------------
+
+.has-reveal{
+  position: relative;
+  overflow-x: hidden;
+
+  img{
+    position: relative;
+    z-index: 0;
+    transform: translate3d(10%,0,0);
+    transition: transform 0.5s 0.3s $ease-cb;
+
+    .animated &{
+      transform: translate3d(0,0,0);
+    }
+  }
+  &:after{
+    @include pseudo-element($zindex: 1);
+    background-color: $color-lightgrey;
+    transform: translate3d(0,0,0);
+    transition: transform 0.5s 0.3s $ease-cb;
+
+    .animated &{
+      transform: translate3d(110%,0,0);
+      //transition: transform 0.5s 0.3s $ease-cb;
+      }
+    }
+  }
+
+
+//----------------------------------------------
+//  Text Slice Interaction
+//  Text slice effect created by wrapping words in 
+//  spans and transforming them from below their 
+//  hidden overflow-y parent.
+//  
+//  @see js/vendor/_wow.js
+//----------------------------------------------
+.js-scroll{
+  //visibility: visible !important;
+
+  .js-words{
+    //overflow-y: hidden;
+    display: inline-block;
+    line-height: 1;
+
+    .oh{
+      display: inline-block;
+      overflow-y: hidden;
+    }
+    .oh span{
+      display: inline-block;
+      //transform: translate3d(0,200%,0);
+      transition: opacity 0s ease, transform 0.7s 0.1s $ease-cb-2;
+    }
+  }
+
+  &.animated{
+    .js-words .oh span{
+      opacity: 1;
+      //transform: translate3d(0,0,0);
+      animation: slideUp 0.6s 0.1s ease both;
+      transition: opacity 0s ease, transform .7s  0.5s $ease-cb-2;
+       //@include nth-trans-delay(10, .1s);
+    }
+
+    .js-words .oh{
+      &:nth-of-type(1) span{
+        animation-delay: 0.1s;
+      }
+      &:nth-of-type(2) span{
+        animation-delay: 0.15s;
+      }
+      &:nth-of-type(3) span{
+        animation-delay: 0.2s;
+      }
+      &:nth-of-type(4) span{
+        animation-delay: 0.25s;
+      }
+      &:nth-of-type(5) span{
+        animation-delay: 0.3s;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: none; } }
+
+.u-slideUp {
+  animation-name: slideUp; }

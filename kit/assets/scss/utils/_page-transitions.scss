@@ -1,0 +1,56 @@
+//----------------------------------------------
+//  Page Transitions
+//  Interactions on page out and page in.
+//  Via js, we're adding an 'is-exiting' class
+//  on page out, and on page in, we're adding
+//  an 'is-loading' class, followed by 'is-loaded'.
+//
+//  @see js/components/_page-transitions.js
+//----------------------------------------------
+
+.is-exiting{
+
+  // Footer, when and if we rock one
+  main,.site-footer{  
+    animation: fade-out 0.5s 1s ease both;
+  }
+
+  // Sequentially fade shit out.
+  section * + *, 
+  //article * + *,
+  .post, 
+  .work-feed,
+  .content p,
+  .gal .gal__img{
+    animation: fade-out 0.5s ease both;
+    @include nth-ani-delay(10, 0.1s);
+  }
+
+  // More Posts
+  .more-posts{
+    animation: fade-out 0.5s 0.5s ease both;
+  }
+}
+
+  
+  main, .more-posts{
+    opacity: 0
+  }
+
+  .site-header{
+    opacity: 1;
+    //animation: fade-in 0.3s ease forwards;
+  }
+
+
+.is-loaded{
+  main{
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  .more-posts, .site-footer{
+    opacity: 1;
+    transition: opacity 1s 1s ease;
+  }
+}

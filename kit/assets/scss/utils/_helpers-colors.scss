@@ -1,0 +1,30 @@
+//----------------------------------------------
+//  Color Helpers
+//----------------------------------------------
+.bg-white{
+ background-color: #fff;
+}
+
+.bg-lightgrey{
+ background-color: $color-lightgrey;
+}
+
+.bg-alpha{
+  background-color: $color-alpha;
+}
+
+.bg-beta{
+  background-color: $color-beta;
+}
+
+.bg-dark{
+  background-color: $color-dark;
+}
+
+.bg-alert{
+  background-color: $color-alert;
+}
+
+.bg-success{
+  background-color: $color-success;
+}

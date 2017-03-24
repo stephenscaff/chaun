@@ -1,0 +1,251 @@
+//----------------------------------------------   
+// header height var
+//---------------------------------------------- 
+$header-height: 4em;
+
+//----------------------------------------------   
+//  Site-header
+//  Our global header and nav
+//---------------------------------------------- 
+.site-header {
+  z-index: 91;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: $header-height;
+  line-height: $header-height;
+  color: #fff;
+  transition: all 1s ease;
+ 
+  &__wrap {
+    max-width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    @media (min-width: $mq-large){
+      max-width: 95%;
+    }
+  }
+}
+
+//----------------------------------------------   
+//  Site-header Logo
+//---------------------------------------------- 
+.site-header__logo {
+  display: inline-block;
+
+  line-height: 0;
+  transition: all .5s ease;
+
+  img, span {
+    vertical-align: middle;
+  }
+
+  span{
+    position: relative;
+    display: inline-block;
+    background-color: $color-beta;
+    transition: transform 0.6s $ease-cb;
+  }
+
+  $logo_height: 1.75em;
+  .logo-c{
+    height: $logo_height;
+    width:$logo_height / 2;
+    margin-right: -0.5em;
+    border-radius: $logo_height / 2 0em 0em $logo_height / 2;
+    transition: transform 0.6s 0.1s $ease-cb, border-radius 0.4s $ease-cb, width 0.4s $ease-cb, height 0.4s $ease-cb;
+  }
+
+  .logo-o{
+    height: $logo_height / 2;
+    width: $logo_height / 2;
+    border-radius: 100%;
+    transition: transform 0.6s $ease-cb-2;
+  }
+  span{
+    font-family: $font-header;
+  }
+
+  &:hover{
+
+    .logo-c{
+      //border-radius: 0em 1em 1em 0em;
+      border-radius: 1em;
+      width: 1em;
+      height: 1em;
+      //transform: translate3d(1.5em, 0, 0);
+      transition: transform 0.4s 0.1s $ease-cb, border-radius 0.3s $ease-cb, width 0.3s $ease-cb, height 0.3s $ease-cb;
+    }
+
+    .logo-o{
+      transform: translate3d(-1.05em,0,0);
+      opacity: 0;
+      transition: transform 0.4s $ease-cb-2, opacity 0.1s 0.2s ease;
+    }
+  }
+  &:active{
+    span{
+      width: 0.75em;
+      height: 0.75em;
+      background-color: $color-alpha !important;
+      transition: all 0.7s ease;
+    } 
+  }
+}
+
+//----------------------------------------------
+//  Logo Animation
+//----------------------------------------------
+@keyframes logo-c{
+  0%{
+    width: 1em;
+    border-radius: 1em 0em 0em 1em;
+  }
+
+  25%{
+    border-radius: 1em 1em 1em 1em;
+    width: 2em;
+    transform: translate3d(.25em, 0, 0);
+  }
+
+  50%{
+    width: 1em;
+    border-radius: 0em 1em 1em 0em;
+    transform: translate3d(1.25em, 0, 0);
+  }
+
+  75%{
+    border-radius: 1em 1em 1em 1em;
+    width: 2em;
+    transform: translate3d(.25em, 0, 0);
+  }
+
+  100%{
+    width: 1em;
+    border-radius: 1em 0em 0em 1em;
+  }
+}
+
+//----------------------------------------------
+//  Site Header nav
+//---------------------------------------------- 
+.site-header__nav {
+  text-align: right;
+  font-family: $font-subheader;
+  @media (min-width: $mq-med) {
+    display: inline-block;
+  }
+
+  ul > li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.75em;
+    padding: 0;
+  }
+ 
+  a {
+    display: inline-block;
+    font-size: $font-xxsmall;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+    padding: 0;
+    @include link-line($color-beta, $color-alpha, $color-beta);
+
+  }
+   
+  a:hover, a:focus, a:active  {
+    color: $color-alpha;
+  }
+}
+
+//----------------------------------------------
+//  Siteheader Fixed
+//----------------------------------------------
+%site-header--fixed{
+  position: fixed;
+  border-bottom: 0;
+  background-color: rgba(255,255,255,0.5) !important;
+  animation: none !important;
+  border: none !important;
+}
+
+%site-header--light{
+  nav a{
+    color: rgba(#fff, 0.8);
+
+    &:hover{
+      color: #fff !important;
+    }
+
+    .scrolling-down &{
+      color: $color-beta;
+    }
+  }
+
+  .site-header__logo span{
+    background-color: rgba(#fff, 0.8);
+
+    .scrolling-down &{
+      background-color: $color-beta;
+    }
+  }
+}
+
+//----------------------------------------------
+//  Apply Modifier Themes
+//----------------------------------------------
+.site-header{
+
+  .about &{
+    //@extend %site-header--fixed;
+  }
+
+  .single-work &, .single &{
+    @extend %site-header--light;
+  }
+}
+
+//----------------------------------------------
+//  Scrolling INteraction
+//----------------------------------------------
+.scrolling-down {
+
+  .site-header{
+    position: fixed;
+    background: $color-lightgrey;
+    //box-shadow: 0 1px 1px rgba($color-dark, .1);
+    border-bottom: 1px solid #ddd;
+    transition: transform .5s ease, background .1s ease;
+    animation: nav-down ease-in-out .3s .1s both;
+    @include engine3d;
+
+    nav a{
+      color: $color-dark;
+
+      &:hover{
+        color: $color-dark !important;
+      }
+    }
+
+    .site-header__logo span{
+      background-color: $color-beta;
+    }
+    .site-header__menu-bars,
+    .site-header__menu-bars:before,
+    .site-header__menu-bars:after{
+      background-color: $color-dark;
+    } 
+  } 
+}
+//----------------------------------------------
+//  Scrolling Animation
+//----------------------------------------------
+@keyframes nav-down {
+  0%   { transform: translateY(-$header-height); }
+  100% { transform: translateY(0px); }
+}

@@ -1,0 +1,16 @@
+/*Designed and Built by actual humans: */
+
+This site was built with all the love in the world by UrbanInfluence in Seattle, WA.
+
+/* Technology */ 
+
+HTML5 / CSS3 / SASS, Jquery, PSD, Codekit, Mad Awesomeness
+
+/* Stephen Scaff */
+
+url: http://stephenscaff.com
+email: smscaff@gmail.com
+Twitter: @stephenscaff
+Dribbble: https://dribbble.com/stephenscaff
+Seattle, WA
+

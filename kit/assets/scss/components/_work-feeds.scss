@@ -1,0 +1,77 @@
+//----------------------------------------------
+// Work CTAs
+//-----------------------------------------------
+// .work-feeds{
+//   padding: $pad-sm 0 $pad-xl;
+
+//   &__grid{
+//     //@include flex-grid(1,2, $pad: 2.5em);
+//     @media (min-width: $mq-med){
+//       margin-left: -1.5em;
+//       margin-right: -1.5em;
+//       column-count: 2;
+//       column-gap: 1.5em;
+//     }
+
+//     & > *{
+//       margin: 0 0 2em;
+//       @media (min-width: $mq-med){
+//         break-inside: avoid-column;
+//         padding-left: 1.5em;
+//         paddoing-right: 1.5em;
+//       }
+//     }
+//   }
+// }
+
+
+.work-feeds{
+  padding: 0 0 $pad-xl;
+
+  @media (min-width: $mq-med){
+    padding: $pad-sm 0 $pad-xl;
+  }
+
+  &__grid{
+    @media (min-width: $mq-med){
+      @include col-grid(1,2, $gap: 1.5em, $pad: 1.5em);
+    }
+  }
+}
+
+//----------------------------------------------
+// Work CTAs
+//-----------------------------------------------
+.work-feed{
+
+  // Link
+  &__link{
+    display: block;
+  }
+
+  // Pretitle
+  &__meta{
+    @extend %font-meta;
+  }
+
+  // Title
+  &__title{
+    font-size: $font-h4;
+  }
+
+  &__figure{
+    margin-bottom: 1em;
+  }
+
+  // Image
+  &__img{}
+
+  // Button
+  &__btn{
+    color: $color-beta;
+
+    .work-cta__link:hover &{
+      color: $color-alpha;
+    }
+  }
+}

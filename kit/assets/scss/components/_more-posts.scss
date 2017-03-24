@@ -1,0 +1,76 @@
+//----------------------------------------------
+//  More Posts
+//  Additional posts items that appear on journal and work
+//  pages as a reveal drawer fixed to viewport bottom. 
+//-----------------------------------------------
+.more-posts{
+  z-index: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: $pad-sm 0;
+  background: $color-beta;
+
+  @media (min-width: $mq-large){
+    position: fixed;
+  }
+
+  &__grid{
+    @include flex-grid(2,4, $pad: 1em);
+  }
+
+  &__title{
+    @extend %font-meta;
+    color: #fff;
+  }
+
+  a{
+    @include link-styles(#fff, $color-alpha);
+  }
+
+  a:hover img{
+    border: 1px solid $color-alpha;
+    transition: border 0.5s ease;
+  }
+
+  img{
+    border: 1px solid $color-beta;
+    transition: border 0.5s ease;
+  }
+
+  .has-preloader{
+    background-color: rgba(#000, 0.1);
+  }
+
+  .post__title{
+    color: rgba(#fff, 0.8);
+    font-family: $font-subheader;
+    line-height: 1.2;
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .preloader{
+    @extend %preloader--sm;
+  }
+}
+
+
+//----------------------------------------------
+//  More Posts Setups
+//-----------------------------------------------
+
+// Appy to main for drawer offset
+.has-more-posts,
+.has-fixed-offset{
+  @media (min-width: $mq-large){
+    z-index: 9;
+    position: relative;
+    margin-bottom: 18.2em;
+  }
+}
+
+.single-work main section:last-child{
+  //padding-bottom: $pad;
+}
+

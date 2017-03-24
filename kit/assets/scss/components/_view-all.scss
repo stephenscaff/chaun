@@ -1,0 +1,14 @@
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.view-all{
+  padding: $pad-sm 0;
+  text-align: center;
+
+  &__btn{
+    font-size: $font-h3;
+  }
+}
