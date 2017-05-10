@@ -1,0 +1,78 @@
+//----------------------------------------------
+//  Pagination
+//
+//  Previous/Next pagination pattern, rather 
+//  than by page numbers/groupings, ie 1,2,3...
+//  Also used for single post type navigation 
+//-----------------------------------------------
+
+.error404{
+  .site-header, .site-footer{
+    display: none;
+  }
+}
+
+.fourohfour{
+  //padding: $pad-lg 0;
+  padding: $pad 0;
+
+  @media (min-width: $mq-med){
+    padding: 0;
+  }
+
+
+  &__grid{
+    min-height: 100vh;
+    @include flex-row($vcenter:true);
+  }
+
+  &__figure{
+    @include flex-col(50%);
+    mix-blend-mode: darken;
+
+    @media (max-width: $mq-med){
+      max-width: 15em;
+      margin: 0 auto;
+    }
+  }
+
+  &__content{
+    @include flex-col(50%);
+ 
+    @media (min-width: $mq-med){
+      padding-left: 1em;
+    }
+  }
+
+  &__pretitle{
+    display: block;
+    margin-bottom: $mb;
+    @extend %font-pretitle;
+    animation: fade-in 1s 0.75s ease both;
+
+  }    
+
+  &__title{
+    font-size: 2em;
+    animation: fade-in 1.5s 1s ease both;
+    @media (min-width: $mq-med){
+      font-size: 3em;
+    }
+    @media (min-width: $mq-xlarge){
+      font-size: 4em;
+    }
+  }
+
+  &__subtitle{
+    font-family: $font-subheader;
+    animation: fade-in 1.5s 1.5s ease both;
+  }
+  &__text{
+    animation: fade-in 2s 2.5s ease both;
+  }
+
+  .btn{
+    margin-top: 1em;
+    animation: fade-in 1.5s 2s ease both;
+  }
+}

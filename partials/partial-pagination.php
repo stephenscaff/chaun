@@ -1,6 +1,6 @@
 <?php
 /**
- * Section: Pagination
+ * Partials : Pagination
  *
  * Calls pagination funciton
  *  

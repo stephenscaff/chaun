@@ -5,7 +5,7 @@
 * The module for adding dymanically sizes images..
 *
 * @author       Stephen Scaff
-* @package      SandP
+* @package      partials/modules
 * @see          kit/scss/components/_auto-grid.scss
 * @version      1.0
 */

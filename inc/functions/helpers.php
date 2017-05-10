@@ -94,11 +94,3 @@ function get_query_value( $key ) {
   }
   return $_GET[$key];
 }
-
-
-/*
-if(strlen($title) > 24)
-    {
-        $title = substr($title, 0, 20) . "....";
-    }
-*/

@@ -5,8 +5,8 @@
  * The module for adding a simple image slider.
  *
  * @author       Stephen Scaff
- * @package      SandP
- * @see          kit/scss/components/_auto-grid.scss
+ * @package      partials/modules
+ * @see          kit/scss/vendor/_slider.scss
  * @version      1.0
  */
 
@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Vars
 $slider = 'slider';
 $pad = get_sub_field('padding');
+
 ?>
 
 <section class="slider <?php if ($pad) : echo $pad; endif; ?>">

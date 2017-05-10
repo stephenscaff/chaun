@@ -1,12 +1,12 @@
 <?php
 /**
- * Partial: Work CTAs
+ * Partial: Featured Post
  *
- * A partial that inlcudes Work CTAs
+ * A partial that inlcudes Featured Posts
  *
  * @author    Stephen Scaff
- * @package   jumpoff/partialas
- * @version     1.0
+ * @package   partials
+ * @version   1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -24,8 +24,12 @@ $args = array(
       'operator'    => 'IN',
     ),
   ));
-  $featured = get_posts( $args );
-  if ($featured) : ?>
+
+$featured = get_posts( $args );
+
+if ($featured) : 
+
+?>
 
 <section class="ftd-post">
   <div class="grid-lg">

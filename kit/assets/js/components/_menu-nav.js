@@ -1,6 +1,8 @@
-/*----------------------------------------------   
- -Offcanvas Menu Nav
- -----------------------------------------------  */
+/**
+ *  Offcanvas Menu Nav
+ *  Menu interaction for mobile or mobile-styled navs
+ *  @author stephen scaff
+ */
 (function($) {
   var s,
   menuNav = {

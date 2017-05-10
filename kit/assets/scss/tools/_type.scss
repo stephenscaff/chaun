@@ -1,8 +1,7 @@
 //----------------------------------------------   
 //  Global Font Styles
 //  Placeholder Extends for tracking consistent type styles.
-//  @see: scss/base/typography.scss handles header sizings and setup.
-//                You create titles and subtitles here.
+//  You create titles and subtitles here.
 //----------------------------------------------- 
 %font-uppercase{
   font-family: $font-paragraph;
@@ -58,18 +57,18 @@
    @include font-small-mono();
 }
 
-/*----------------------------------------------   
--section Title Styles
------------------------------------------------  */
+
+
+//----------------------------------------------
+//  Font Lead Styles
+//----------------------------------------------
 %font-lead,
 .font-lead{
   font-size: 120%;
- -webkit-hyphens: none;
- -moz-hyphens: none;
- -ms-hyphens: none;
- hyphens: none;
- margin-bottom: 0.8em;
- line-height: 1.6;
+  -ms-hyphens: none;
+  hyphens: none;
+  margin-bottom: 0.8em;
+  line-height: 1.6;
  @media (min-width: $mq-med) {
    font-size: 135%;
  }
@@ -100,7 +99,7 @@
 
 //----------------------------------------------
 //  word-break()
-//  @description: Solution for one word per line. We need
+//  Solution for one word per line. We need
 //  to apply within @media, so couldn't just be an extend.
 //----------------------------------------------
 @mixin word-break(){

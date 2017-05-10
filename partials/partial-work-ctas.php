@@ -19,7 +19,9 @@ $args = array(
 );
 
 $work_ctas = get_posts( $args );
-$counter = 1;?>
+$counter = 1;
+
+?>
 
 <section class="work-ctas">
   <div class="grid">

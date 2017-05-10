@@ -1,5 +1,6 @@
 //----------------------------------------------
-// Featured Post
+//  Featured Post Styles
+//  @see partials/partial-featured-post.php
 //-----------------------------------------------
 .ftd-post{
 
@@ -24,6 +25,7 @@
   &__header{
     @include flex-col(40%);
     text-align: center;
+    padding: 0 2em;
     @media (min-width: $mq-med){
       padding: 1em 2em;
     }
@@ -46,19 +48,13 @@
     max-width: 10em;
     margin: 0 auto;
 
-
     @media (min-width: $mq-med){
       font-size: $font-h2;
     }
   }
+
   &__figure{
     @include flex-col(60%);
-  }
-  // Image
-  &__img{
-
-    // Hover
-    .ftd-post__link:hover &{}
   }
 
   // Button

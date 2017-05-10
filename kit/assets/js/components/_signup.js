@@ -2,7 +2,8 @@
  * Mail Chimp Ajax Signup and interaction
  *
  * Currently used inside a signup modal.
- *
+ * 
+ * @author Stephen Scaff
  * @see scss/components/_signup.scss
  * @see scss/components/_modals.scss
  * @see js/components/_popups.scss

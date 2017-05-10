@@ -11,6 +11,7 @@
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $content = get_sub_field('content'); 
 $grid = get_sub_field('grid_width');  
 $pad = get_sub_field('padding');  

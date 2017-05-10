@@ -1,8 +1,10 @@
 //----------------------------------------------
 //  Posts Group
+//  Our Posts grid
+//
 //  @group posts
+//  @requires (mixin) flex-grid()  scss/tools/_grid.scss
 //----------------------------------------------
-
 .posts{
   &__grid{
     @include flex-grid(1,2, $pad: 1em);
@@ -14,7 +16,6 @@
 //  Basic post styles for journal entries
 //  @group post
 //----------------------------------------------
-
 .post{
   &__link{}
 
@@ -23,7 +24,7 @@
     @extend %font-meta;
   }
 
-    // @see scss/utils/_preloaders.scss
+  // @see scss/utils/_preloaders.scss
   &__figure{
     @include aspect_ratio(1500, 900 );
     overflow: hidden;

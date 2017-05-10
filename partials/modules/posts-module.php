@@ -5,7 +5,7 @@
 * The module for adding posts or post type sections.
 *
 * @author       Stephen Scaff
-* @package      SandP
+* @package      partials/modules
 * @see          kit/scss/components/_sliders.scss
 * @version      1.0
 */

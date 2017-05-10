@@ -1,16 +1,15 @@
 <?php
 /**
-* Content: content-folio
+* Content: Work
 * Tempalte for displaying the work
 *
 * @author    Stephen Scaff
-* @package   jumpoff/content/content-folio
+* @package   partials/content
 * @version   1.0
 */
 
-if ( ! defined( 'ABSPATH' ) ) {
-exit; // Exit if accessed directly
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $feed_title = get_field('feed_title');
 $feed_img = get_field('feed_image');
 

@@ -8,6 +8,7 @@
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 ?>
 <article class="post">
   <a class="post__link" href="<?php the_permalink(); ?>">

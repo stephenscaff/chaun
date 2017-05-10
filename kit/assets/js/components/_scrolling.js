@@ -23,13 +23,3 @@ var wow = new WOW(
   }
 );
 wow.init();
-
-
-/**
- * Refresh/Rerun our animation
- */
-// refreshAnimation: function(){
-//   settings.mast.removeClass(settings.animateClass);
-//   mast.offsetWidth = mast.offsetWidth;  
-//   settings.mast.addClass(settings.animateClass);
-// }

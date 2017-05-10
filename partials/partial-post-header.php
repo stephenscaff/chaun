@@ -5,11 +5,12 @@
  * The Partial for Post Footers, used on blogposts and the mondalite post type.
  *
  * @author    Stephen Scaff
- * @package   Jumpoff
+ * @package   Partials
  * @version   1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $subtitle = get_field('subtitle');
 
 ?>

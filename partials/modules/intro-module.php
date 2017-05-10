@@ -5,7 +5,7 @@
 * The module for creating Intro Sections
 *
 * @author       Stephen Scaff
-* @package      SandP
+* @package      partials/modules
 * @see          kit/scss/components/_intros.scss
 * @version      1.0
 */

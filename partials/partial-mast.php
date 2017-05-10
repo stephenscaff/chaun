@@ -5,7 +5,7 @@
  *  Template for displaying our simple mast elements
  *
  *  @author    Stephen Scaff
- *  @package   jumpoff/partials
+ *  @package   partials
  *  @version   1.0
  */
 

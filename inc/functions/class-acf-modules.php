@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Bail if accessed directly
 * from within the modules directory.
 *
 * @author       Stephen Scaff
-* @package      Inrix
+* @package      Modules
 * @see          partials/modules
-* @see          asthttp://www.advancedcustomfields.com/add-ons/flexible-content-field/
+* @see          http://www.advancedcustomfields.com/add-ons/flexible-content-field/
 * @version      1.0
 * @example      ACF_Layout::render(get_row_layout());
 */

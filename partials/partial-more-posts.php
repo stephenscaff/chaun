@@ -1,6 +1,8 @@
 <?php
 /**
- *  Section: Next Post
+ *  Partial: More Posts
+ *  The More Posts section that appears at the bottom of
+ *  single post/cpt instances, providing additional post previews.
  *
  *  @author     Stephen Scaff
  *  @package    partials
@@ -33,7 +35,7 @@ if (is_post_type('work')){
 $args = array(
   'post_type'        => $post_type,
   'posts_per_page'   => 4,
-  'post__not_in' => array ($current_post),
+  'post__not_in'     => array ($current_post),
   'order'            => 'DESC',
 );
 $more_posts = get_posts($args);

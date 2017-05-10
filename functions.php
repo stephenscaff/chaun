@@ -3,12 +3,6 @@
 #bail if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
-/** 
-* Run all functions throug a setup
-* function jumpoff_setup() {}
-* add_action('after_setup_theme', 'jumpoff_setup');
-**/
-
 # Admin: Appearance
 require_once('inc/admin/admin-theme/admin-theme.php');
 
@@ -26,9 +20,6 @@ require_once('inc/admin/admin-menu-order.php');
 
 # Admin: Post Order (drag and drop)
 require_once('inc/admin/admin-post-order/post-order.php');
-
-# Admin: Users
-require_once('inc/admin/admin-users.php');
 
 # Admin: Global Menu Items
 //require_once('inc/admin/admin-global-menu-items.php');

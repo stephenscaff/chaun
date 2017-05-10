@@ -1,5 +1,5 @@
 //----------------------------------------------
-// About COlumns
+// About Columns
 //-----------------------------------------------
 .about-cols{
   padding-top: 1em;
@@ -9,9 +9,11 @@
     padding-top: $pad-xl;
     padding-bottom: $pad-xl;
   }
+
   &__grid{
     //@inlcude flex-row();
   }
+  // @todo - this is super lame. Maybe js a better solution
   &__figure.is-fixed{
     width: 100%;
     padding-bottom: 75%;
@@ -31,7 +33,6 @@
       background-position: bottom left;
       background-size: contain; 
     }
-    @media (min-width: $mq-large){}
     @media (min-width: 75em){
       bottom: -4%;
     }
@@ -54,17 +55,14 @@
   }
 
   &__header{
-    //padding: $pad 0;
     animation: fade-in 1s 0.8s ease both;
   }
   &__copy{
     padding: 0.5em 0;
-    //opacity: 0;
     animation: fade-in 1s 1s ease both;
     @media (min-width: $mq-med){
       margin-left: $pad;
     }
-
   }
   &__pretitle, &__title{
     @media (min-width: $mq-med){

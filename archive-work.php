@@ -1,10 +1,11 @@
 <?php
 /**
- * Template for general posts archives.                                                                                                               n
+ * Template for the Work CPT Archive
  *
  * @author    Stephen Scaff
- * @package   page
+ * @package   cpt index
  * @version   2.0.0
+ * @see       inc/post-types/post-type-work.php
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

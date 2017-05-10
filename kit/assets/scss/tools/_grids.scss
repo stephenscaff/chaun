@@ -1,4 +1,3 @@
-
 //----------------------------------------------  
 //  flex-grid();
 //  Creates grid blocks via flexbox
@@ -99,7 +98,16 @@
   }
 }
 
-
+//----------------------------------------------  
+//  CSS Columns helper
+//  A helper to output cross browser requirements for 
+//  columns inside a flexbox parent. flex-basis isn't
+//  enough in all cases.
+//
+//  @param $sm - $xl Breakpoints
+//  @param $gam - gab between cols
+//  @param $pad - col padding
+//----------------------------------------------
 @mixin col-grid($sm:null, $med:null, $lg:null, $xl:null, $gap:0,$pad:0){
   position: relative;
   display: block;

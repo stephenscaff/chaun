@@ -1,29 +1,8 @@
 //----------------------------------------------
-// Work CTAs
+//  Work Feeds Grid/Section
+//  @requires (mixin) col-grid - a multi column grid mixin
+//  @see      scss/tools/_grids.scss
 //-----------------------------------------------
-// .work-feeds{
-//   padding: $pad-sm 0 $pad-xl;
-
-//   &__grid{
-//     //@include flex-grid(1,2, $pad: 2.5em);
-//     @media (min-width: $mq-med){
-//       margin-left: -1.5em;
-//       margin-right: -1.5em;
-//       column-count: 2;
-//       column-gap: 1.5em;
-//     }
-
-//     & > *{
-//       margin: 0 0 2em;
-//       @media (min-width: $mq-med){
-//         break-inside: avoid-column;
-//         padding-left: 1.5em;
-//         paddoing-right: 1.5em;
-//       }
-//     }
-//   }
-// }
-
 
 .work-feeds{
   padding: 0 0 $pad-xl;
@@ -40,7 +19,8 @@
 }
 
 //----------------------------------------------
-// Work CTAs
+//  Work CTAs
+//  Single work feed elements
 //-----------------------------------------------
 .work-feed{
 
@@ -62,9 +42,6 @@
   &__figure{
     margin-bottom: 1em;
   }
-
-  // Image
-  &__img{}
 
   // Button
   &__btn{

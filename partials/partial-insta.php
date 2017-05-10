@@ -4,7 +4,9 @@
  *
  * @author    Stephen Scaff
  * @package   partials
- * @version    1.0
+ * @version   1.0
+ * @see   js/components/_instagrammin.js
+ * @see   scss/components/_insta.js
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

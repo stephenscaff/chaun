@@ -1,9 +1,9 @@
 <?php
 /**
- * Template for general posts archives.                                                                                                               n
+ * Template for general posts archives.                                                                             
  *
  * @author    Stephen Scaff
- * @package   page
+ * @package   Archive/Index
  * @version   2.0.0
  */
 

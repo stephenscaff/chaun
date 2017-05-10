@@ -1,10 +1,10 @@
 <?php
 /**
- * Partial: partials/partial-header
+ * Partial: header
  *
  * @author    Stephen Scaff
- * @package   jumpoff/partials/partial-header
- * @version    1.0
+ * @package   partials
+ * @version   1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

@@ -5,8 +5,8 @@
  * The module for adding gallery like images.
  *
  * @author       Stephen Scaff
- * @package      SandP
- * @see          kit/scss/components/_auto-grid.scss
+ * @package      partials/modules
+ * @see          kit/scss/components/_gals.scss
  * @version      1.0
  */
 

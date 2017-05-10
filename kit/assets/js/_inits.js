@@ -30,9 +30,6 @@ var site = {
   lazy: function(){
     $(".js-lazy").unveil(10, function() {
       $(this).load(function() {
-        //this.style.opacity = 1;
-        //$(this).parent().addClass('loaded');
-        //$(this).fadeOut(0).fadeIn(400);
       });
     });
   },

@@ -66,7 +66,7 @@
       opacity: 1;
       //transform: translate3d(0,0,0);
       animation: slideUp 0.6s 0.1s ease both;
-      transition: opacity 0s ease, transform .7s  0.5s $ease-cb-2;
+      transition: opacity 0s eu-slidease, transform .7s  0.5s $ease-cb-2;
        //@include nth-trans-delay(10, .1s);
     }
 
@@ -94,7 +94,6 @@
   from {
     transform: translate3d(0, 100%, 0); }
   100% {
-    transform: none; } }
-
-.u-slideUp {
-  animation-name: slideUp; }
+    transform: none; 
+  } 
+}

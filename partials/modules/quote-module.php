@@ -5,7 +5,7 @@
  * The module for adding Quotes
  *
  * @author       Stephen Scaff
- * @package      jumpoff/partials/modules
+ * @package      partials/modules
  * @version      1.0
  */
 

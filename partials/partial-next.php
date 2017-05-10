@@ -1,7 +1,6 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit; // Bail if accessed directly
 /**
- *  Section: Next Post
+ *  Partial: Next Post / Keep Reading section
  *
  *  @author     Stephen Scaff
  *  @package    partials
@@ -16,8 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Bail if accessed directly
  *              $taxonomy = 'category'
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Bail if accessed directly
+
 $current_post = $post->ID;
 $post_type = 'work';
+
 ?>
 <section class="more-posts">
   <div class="grid-lg">

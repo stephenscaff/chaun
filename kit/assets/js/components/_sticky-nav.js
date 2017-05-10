@@ -1,6 +1,7 @@
 /**
- * Basic Sticky Nav
- * Used interval to reduce number of times our scroll event fires.
+ *  Basic Sticky Nav
+ *  Used interval to reduce number of times our scroll event fires.
+ *  @author  stephen scaff
  */
 (function($) {
 

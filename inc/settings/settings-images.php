@@ -128,5 +128,3 @@ if (!class_exists('WpImageSettings ')) {
 }
 }
 new WpImageSettings ();
-
-?>
